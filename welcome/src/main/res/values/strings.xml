@@ -1,0 +1,17 @@
+<resources>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--navigation drawer-->
+    <string name="navbar_title">Plus Mobile Apps</string>
+    <string name="welcome">Welcome</string>
+    <string name="intro">Intro</string>
+
+    <!--reader activity-->
+    <string name="overview_title">Welcome to Plus Mobile Apps</string>
+    <string name="overview_subtitle">Instant App Tutorial</string>
+</resources>

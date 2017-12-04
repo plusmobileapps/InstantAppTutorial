@@ -1,5 +1,6 @@
 package com.plusmobileapps.instantapptutorial.feature
 
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -8,8 +9,12 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_welcome.*
 import kotlinx.android.synthetic.main.app_bar_welcome.*
+import android.content.Intent
+
+
 
 class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -18,17 +23,13 @@ class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         setContentView(R.layout.activity_welcome)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        nav_view.setCheckedItem(R.id.nav_welcome)
     }
 
     override fun onBackPressed() {
@@ -65,5 +66,21 @@ class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun openGithubRepo(view: View) : Unit {
+        val uri = Uri.parse("https://github.com/plusmobileapps/InstantAppTutorial")
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
+    }
+
+    fun  openTwitterAccount(view: View) : Unit {
+        val uri = Uri.parse("https://twitter.com/plusmobileapps")
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
+    }
+
+    fun openNextChapter(view: View) : Unit {
+
     }
 }

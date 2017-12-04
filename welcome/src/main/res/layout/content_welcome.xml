@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,13 +9,84 @@
     tools:context="com.plusmobileapps.instantapptutorial.feature.WelcomeActivity"
     tools:showIn="@layout/app_bar_welcome">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:gravity="center_horizontal"
+            android:text="@string/overview_title"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:gravity="center_horizontal"
+            android:text="@string/overview_subtitle"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/android_instant_apps" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/welcome_body"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_twitter"
+                android:onClick="openTwitterAccount"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                fancy:fb_defaultColor="#55acee"
+                fancy:fb_focusColor="#313131"
+                fancy:fb_iconPaddingLeft="0dp"
+                fancy:fb_iconPaddingRight="0dp"
+                fancy:fb_iconResource="@drawable/twitter"
+                fancy:fb_radius="64dp"
+                fancy:fb_textColor="#FFFFFF" />
+
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_github"
+                android:onClick="openGithubRepo"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                fancy:fb_defaultColor="#000000"
+                fancy:fb_focusColor="#313131"
+                fancy:fb_iconPaddingLeft="0dp"
+                fancy:fb_iconPaddingRight="0dp"
+                fancy:fb_iconResource="@drawable/github"
+                fancy:fb_radius="64dp"></mehdi.sakout.fancybuttons.FancyButton>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -11,7 +11,10 @@
     <string name="welcome">Welcome</string>
     <string name="intro">Intro</string>
 
-    <!--reader activity-->
-    <string name="overview_title">Welcome to Plus Mobile Apps</string>
+    <!--welcome activity-->
+    <string name="overview_title">Welcome to \nPlus Mobile Apps</string>
     <string name="overview_subtitle">Instant App Tutorial</string>
+    <string name="welcome_body">Thanks for visiting the Plus Mobile Apps tutorial! The purpose of this app is teach others who are curious about developing an Android instant app everything there is to know. I have been passionately doing research about instant apps and I have always found the best way to learn something is to teach it. So I figured the best way to teach instant apps is by creating an instant app myself that teaches you everything there is to know. At the same time this app will be my playground for new languages and concepts, so I have plans in the future to teach Kotlin, Android architecture components, and much more!
+\n\nSo as I begin the development of this project, I hope you stick around and keep an eye out for updates to the app if you choose to do a full install or follow me on twitter to get links for the next chapter and learn the future of Android development while I get you to slowly piece together a native app experience by just clicking a link and never needing to click install!
+</string>
 </resources>

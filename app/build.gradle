@@ -2,14 +2,19 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
 
     defaultConfig {
         applicationId "com.plusmobileapps.instantapptutorial"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.minSdkVersion
-        versionCode 1
+        versionCode rootProject.ext.versionCode
         versionName "1.0"
 
 

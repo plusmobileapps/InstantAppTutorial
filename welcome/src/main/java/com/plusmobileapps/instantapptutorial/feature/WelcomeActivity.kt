@@ -21,6 +21,14 @@ class WelcomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+
+        val appLinkIntent = intent
+        val appLinkAction = appLinkIntent.action
+        var appLinkData: Uri?  = appLinkIntent.data
+        if (appLinkData != null) {
+
+        }
+
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
